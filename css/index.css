@@ -1,0 +1,191 @@
+/*selettore per tag*/
+
+html{
+  font-size: 18px;    /*gutter*/
+}
+
+body  {
+  /*padding: 3rem;*/
+  font-family: 'Overpass', sans-serif;
+
+  color: #ffffff;
+  background-color: #2b2b2b;
+  font-size: :5vw;
+  letter-spacing: 0px;
+  word-spacing: 0px;
+  line-height: 1.4;
+}
+
+.header--main{
+  background-color: #212121;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+img{
+  max-width: 100%;
+  height: auto;
+
+}
+
+.spacer{
+  height: 2vw; /*16% della finestra*/
+}
+h1{
+  font-size: 90px;
+  line-height: 1.1;
+  /* margin: 0 0 0 0; */
+  /* margin: 0; */
+}
+ .color-red{
+   color: #ff0000;
+ }
+ .color-blu{
+   color: #0000ff;
+ }
+
+ .underline{
+   text-decoration: underline;
+ }
+#titolo-1 {
+  color: orange;
+}
+
+
+.home{
+  height: 2vw;
+}
+
+.link-l{
+  text-decoration: none;
+  z-index: 80;
+}
+.link{
+  color: #ffffff;
+  text-decoration: none;
+    display: inline-block;
+}
+
+.link:after{
+  content: "";
+  display:block;
+  width: 0%;
+  height: 2px;
+  background-color:#ffffff;
+  transition: all 0.2s ease;
+}
+
+.link:hover:after{
+  width: 100%;
+}
+
+.image-fluid{           /* fluidità dellimmagine che si adatta */
+  height: auto;
+}
+
+
+.image-cover{
+  object-fit: contain;
+  object-position: center;
+
+}
+
+.image-wrapper{
+  transition: all 0.3s ease;
+}
+.image-wrapper:hover{
+  transform: scale(0.9);
+  transition: all 0.5s ease;
+  opacity: 100%;
+}
+.footer--main{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.footer--main-mobile{
+
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.logo{
+  size:20vh;
+}
+.logo-xs{
+  size:20vw;
+}
+
+.off-canvas {
+  position: fixed;
+  top:0;
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  background: black;
+  z-index: 99;
+  transition: 0.6s ease;
+
+}
+.off-canvas.show {
+  right: 0;
+}
+
+.fotoMain{
+  border-radius: 5% 5% 5% 5%;
+}
+
+body {
+  background: #111;
+}
+.side {
+  position: absolute;
+  width: 50vw;
+  top:70px;
+  bottom:0;
+  &.left {
+    left:0;
+    &:hover {
+      &~.wrapper {
+        .front {
+          transform: matrix3d(0.94, 0, 0.34, -0.0002, 0, 1, 0, 0, -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(-10px);
+        }
+        .back {
+          transform: matrix3d(0.94, 0, 0.34, -0.00025, 0, 1, 0, 0, -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(30px);
+        }
+      }
+    }
+  }
+  &.right {
+    right: 0;
+    &:hover {
+      &~.wrapper {
+        .front {
+          transform: matrix3d(0.94, 0, 0.34, 0.0002, 0, 1, 0, 0, -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(30px);
+        }
+        .back {
+          transform: matrix3d(0.94, 0, 0.34, 0.0005, 0, 1, 0, 0, -0.34, 0, 0.94, 0, 1, 0, 10, 1.1) translateX(-100px);
+        }
+      }
+    }
+  }
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.image {
+  perspective: 200px;
+  transition: all .2s ease;
+
+  height: 80%;
+  width: 80%;
+  background-size: cover;
+
+}
